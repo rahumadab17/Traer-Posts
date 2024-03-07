@@ -7,14 +7,14 @@ const getPosts = async() => {
         if (element.id < 5) {
           let post = document.getElementById('post-data');
           let ul = document.createElement('ul');
+          ul.innerHTML = ''
           let li = document.createElement('li');
+          li.innerHTML = `${element.title}`
           let p = document.createElement('p');
-
-          li.textContent = element.title;
-          p.textContent = element.body;
+          p.innerHTML = `${element.body}`
 
           ul.appendChild(li);
-          ul.appendChild(p);
+          ul.appendChild(p)
           post.appendChild(ul);
         }
       });
